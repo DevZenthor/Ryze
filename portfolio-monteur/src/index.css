@@ -237,3 +237,73 @@ html, body, #root {
     0 0 40px rgba(0,255,255,1),
     0 10px 35px rgba(0,0,0,0.9);
 }
+
+/* ================= PRESENTATION SECTION ================= */
+
+.about-section {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.about-card {
+  backdrop-filter: blur(14px);
+  background: rgba(5, 15, 25, 0.65);
+
+  border: 1px solid rgba(0,255,255,0.2);
+  border-radius: 22px;
+
+  padding: 48px 56px;
+  max-width: 520px;
+
+  box-shadow:
+    0 0 60px rgba(0,255,255,0.08),
+    0 15px 60px rgba(0,0,0,0.8);
+}
+
+/* PHOTO */
+
+.about-avatar {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  margin: 0 auto 22px;
+
+  border: 3px solid rgba(0,255,255,0.6);
+
+  box-shadow:
+    0 0 25px rgba(0,255,255,0.8),
+    0 0 60px rgba(0,200,255,0.4);
+}
+
+/* NAME */
+
+.about-name {
+  font-size: 2.4rem;
+  font-weight: 900;
+
+  color: #9efcff;
+
+  margin-bottom: 10px;
+
+  text-shadow:
+    0 0 18px rgba(0,255,255,0.9),
+    0 0 30px rgba(0,200,255,0.6);
+}
+
+/* ROLE */
+
+.about-role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c9f9ff;
+
+  opacity: 0.9;
+}

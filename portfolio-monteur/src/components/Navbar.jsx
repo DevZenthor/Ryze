@@ -1,8 +1,4 @@
-import { useState } from "react"
-
-export default function Navbar() {
-
-  const [lang, setLang] = useState("fr")
+export default function Navbar({ lang, setLang }) {
 
   const toggleLang = () => {
     setLang(lang === "fr" ? "en" : "fr")
@@ -38,6 +34,7 @@ export default function Navbar() {
         {/* LOGO */}
         <div className="navbar-logo">
           <img src="/Ryze.svg" alt="Ryze" />
+          <span className="navbar-title">Ryze</span>
         </div>
 
         {/* LINKS */}
@@ -61,7 +58,7 @@ export default function Navbar() {
 
         </div>
 
-        {/* LANGUAGE SWITCH */}
+        {/* LANGUAGE BUTTON */}
         <button onClick={toggleLang} className="lang-btn">
           {t[lang].langBtn}
         </button>

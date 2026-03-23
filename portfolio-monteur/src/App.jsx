@@ -2,10 +2,12 @@ import { useState } from "react"
 import Navbar from "./components/Navbar"
 import HeroIntro from "./components/HeroIntro"
 import SiteBackground from "./components/SiteBackground"
+import AboutSection from "./components/AboutSection"
 
 export default function App() {
 
   const [entered, setEntered] = useState(false)
+  const [lang, setLang] = useState("fr")
 
   // 🎬 INTRO SEULE
   if (!entered) {
@@ -16,18 +18,13 @@ export default function App() {
   return (
     <div className="text-white">
 
-      {/* VIDEO BACKGROUND GLOBAL */}
       <SiteBackground />
 
-      {/* NAVBAR */}
-      <Navbar />
+      <Navbar lang={lang} setLang={setLang} />
 
-      {/* CONTENU */}
       <div className="relative z-10">
 
-        <section id="about" className="min-h-screen flex items-center justify-center">
-          <h1 className="text-7xl font-bold">Présentation</h1>
-        </section>
+        <AboutSection lang={lang} />
 
         <section id="clients" className="min-h-screen flex items-center justify-center">
           <h2 className="text-5xl font-bold">Clients</h2>
