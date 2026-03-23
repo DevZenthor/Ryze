@@ -1,68 +1,66 @@
+import { useState } from "react"
+import { FaBars, FaTimes } from "react-icons/fa"
+
 export default function Navbar({ lang, setLang }) {
 
-  const toggleLang = () => {
-    setLang(lang === "fr" ? "en" : "fr")
-  }
+  const [open, setOpen] = useState(false)
 
   const t = {
     fr: {
       about: "Présentation",
       clients: "Clients",
       gallery: "Galerie",
-      contact: "Commander",
-      langBtn: "EN"
+      contact: "Commander"
     },
     en: {
       about: "About",
       clients: "Clients",
       gallery: "Gallery",
-      contact: "Order",
-      langBtn: "FR"
+      contact: "Order"
     }
   }
 
   const scrollTo = (id) => {
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: "smooth" })
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+    setOpen(false)
   }
 
   return (
     <nav className="navbar">
 
-      <div className="navbar-container">
+      {/* LOGO */}
+      <img src="/Ryze.svg" className="nav-logo" />
 
-        {/* LOGO */}
-        <div className="navbar-logo">
-          <img src="/Ryze.svg" alt="Ryze" />
-        </div>
-
-        {/* LINKS */}
-        <div className="navbar-links">
-
-          <button onClick={() => scrollTo("about")}>
-            {t[lang].about}
-          </button>
-
-          <button onClick={() => scrollTo("clients")}>
-            {t[lang].clients}
-          </button>
-
-          <button onClick={() => scrollTo("gallery")}>
-            {t[lang].gallery}
-          </button>
-
-          <button onClick={() => scrollTo("contact")}>
-            {t[lang].contact}
-          </button>
-
-        </div>
-
-        {/* LANGUAGE BUTTON */}
-        <button onClick={toggleLang} className="lang-btn">
-          {t[lang].langBtn}
-        </button>
-
+      {/* DESKTOP MENU */}
+      <div className="nav-links">
+        <button onClick={() => scrollTo("about")}>{t[lang].about}</button>
+        <button onClick={() => scrollTo("clients")}>{t[lang].clients}</button>
+        <button onClick={() => scrollTo("gallery")}>{t[lang].gallery}</button>
+        <button onClick={() => scrollTo("contact")}>{t[lang].contact}</button>
       </div>
+
+      {/* LANGUAGE */}
+      <button
+        className="lang-btn"
+        onClick={() => setLang(lang === "fr" ? "en" : "fr")}
+      >
+        {lang === "fr" ? "EN" : "FR"}
+      </button>
+
+      {/* MOBILE BURGER */}
+      <button className="burger" onClick={() => setOpen(!open)}>
+        {open ? <FaTimes /> : <FaBars />}
+      </button>
+
+      {/* MOBILE MENU */}
+      {open && (
+        <div className="mobile-menu">
+          <button onClick={() => scrollTo("about")}>{t[lang].about}</button>
+          <button onClick={() => scrollTo("clients")}>{t[lang].clients}</button>
+          <button onClick={() => scrollTo("gallery")}>{t[lang].gallery}</button>
+          <button onClick={() => scrollTo("contact")}>{t[lang].contact}</button>
+        </div>
+      )}
 
     </nav>
   )
