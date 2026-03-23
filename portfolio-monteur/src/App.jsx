@@ -1,14 +1,25 @@
-import LogoBackground from "./components/LogoBackground"
+import HeroIntro from "./components/HeroIntro"
 
 export default function App() {
   return (
-    <div className="relative min-h-screen text-white">
+    <div className="text-white">
 
-      <LogoBackground />
+      {/* INTRO VIDEO */}
+      <HeroIntro />
 
-      <main className="relative z-10 flex items-center justify-center min-h-screen">
-     
-      </main>
+      {/* PORTFOLIO */}
+      <section
+        id="portfolio"
+        className="
+          min-h-screen
+          flex items-center justify-center
+          bg-black
+        "
+      >
+        <h1 className="text-6xl font-bold">
+          Portfolio
+        </h1>
+      </section>
 
     </div>
   )

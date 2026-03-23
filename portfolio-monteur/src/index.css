@@ -67,3 +67,35 @@ html, body, #root {
     rgba(0,0,0,0.9) 100%
   );
 }
+
+/* ===== HERO VIDEO ===== */
+
+.hero-video {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay sombre pour lisibilité */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+/* Bouton Discover */
+.discover-btn {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
