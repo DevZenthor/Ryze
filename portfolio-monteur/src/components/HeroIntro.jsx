@@ -1,42 +1,6 @@
-import { useEffect } from "react"
-
 export default function HeroIntro() {
 
-  useEffect(() => {
-
-    const preventScroll = (e) => e.preventDefault()
-
-    const preventKeys = (e) => {
-      const keys = ["Space", "ArrowUp", "ArrowDown", "PageUp", "PageDown"]
-      if (keys.includes(e.code)) e.preventDefault()
-    }
-
-    // 🔒 Bloque scroll partout
-    document.body.style.overflow = "hidden"
-    document.documentElement.style.overflow = "hidden"
-
-    window.addEventListener("wheel", preventScroll, { passive: false })
-    window.addEventListener("touchmove", preventScroll, { passive: false })
-    window.addEventListener("keydown", preventKeys)
-
-    return () => {
-      // 🔓 Nettoyage si composant disparaît
-      document.body.style.overflow = "auto"
-      document.documentElement.style.overflow = "auto"
-
-      window.removeEventListener("wheel", preventScroll)
-      window.removeEventListener("touchmove", preventScroll)
-      window.removeEventListener("keydown", preventKeys)
-    }
-
-  }, [])
-
   const scrollDown = () => {
-
-    // 🔓 Débloque scroll
-    document.body.style.overflow = "auto"
-    document.documentElement.style.overflow = "auto"
-
     document
       .getElementById("portfolio")
       ?.scrollIntoView({ behavior: "smooth" })
@@ -45,7 +9,7 @@ export default function HeroIntro() {
   return (
     <section className="hero-video">
 
-      {/* VIDEO */}
+      {/* VIDEO ACCUEIL */}
       <video
         src="/accueil.mp4"
         autoPlay
@@ -54,10 +18,8 @@ export default function HeroIntro() {
         playsInline
       />
 
-      {/* Overlay */}
       <div className="hero-overlay"></div>
 
-      {/* Bouton */}
       <button
         onClick={scrollDown}
         className="

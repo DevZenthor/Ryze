@@ -10,7 +10,6 @@ export default function SiteBackground() {
         playsInline
       />
 
-      {/* Overlay sombre pour lisibilité */}
       <div className="site-overlay"></div>
 
     </div>
