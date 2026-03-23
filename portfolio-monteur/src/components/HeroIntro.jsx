@@ -1,35 +1,47 @@
-export default function HeroIntro() {
-
-  const scrollDown = () => {
-    document
-      .getElementById("portfolio")
-      ?.scrollIntoView({ behavior: "smooth" })
-  }
+export default function HeroIntro({ onEnter }) {
 
   return (
-    <section className="hero-video">
+    <section
+      style={{
+        height: "100vh",
+        width: "100vw",
+        overflow: "hidden",
+        background: "black"
+      }}
+    >
 
-      {/* VIDEO ACCUEIL */}
       <video
         src="/accueil.mp4"
         autoPlay
         muted
         loop
         playsInline
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          width: "100vw",
+          height: "100vh",
+          transform: "translate(-50%, -50%)",
+          objectFit: "cover"
+        }}
       />
 
-      <div className="hero-overlay"></div>
-
       <button
-        onClick={scrollDown}
-        className="
-          discover-btn
-          px-8 py-3 rounded-xl
-          bg-blue-600 hover:bg-blue-500
-          text-white text-lg font-semibold
-          shadow-[0_0_25px_rgba(59,130,246,0.9)]
-          transition
-        "
+        onClick={onEnter}
+        style={{
+          position: "absolute",
+          bottom: "60px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          padding: "14px 36px",
+          borderRadius: "12px",
+          background: "#2563eb",
+          color: "white",
+          fontSize: "18px",
+          fontWeight: "600",
+          boxShadow: "0 0 25px rgba(59,130,246,0.9)"
+        }}
       >
         Découvrir
       </button>

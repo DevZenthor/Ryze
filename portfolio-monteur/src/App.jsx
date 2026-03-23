@@ -1,18 +1,24 @@
+import { useState } from "react"
 import HeroIntro from "./components/HeroIntro"
 import SiteBackground from "./components/SiteBackground"
 
 export default function App() {
+
+  const [entered, setEntered] = useState(false)
+
+  // 🔥 INTRO SEULE
+  if (!entered) {
+    return <HeroIntro onEnter={() => setEntered(true)} />
+  }
+
+  // 💎 SITE SEUL
   return (
     <div className="text-white">
 
-      {/* 💙 VIDEO BACKGROUND FIXE */}
+      {/* VIDEO BACKGROUND GLOBAL */}
       <SiteBackground />
 
-      {/* 🎬 INTRO VIDEO */}
-      <HeroIntro />
-
-      {/* 💎 CONTENU DU SITE */}
-      <div id="portfolio" className="site-wrapper">
+      <div id="portfolio" className="relative z-10">
 
         <section className="min-h-screen flex items-center justify-center">
           <h1 className="text-7xl font-bold">Portfolio</h1>
