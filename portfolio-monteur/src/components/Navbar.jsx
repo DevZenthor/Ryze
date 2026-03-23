@@ -34,7 +34,6 @@ export default function Navbar({ lang, setLang }) {
         {/* LOGO */}
         <div className="navbar-logo">
           <img src="/Ryze.svg" alt="Ryze" />
-          <span className="navbar-title">Ryze</span>
         </div>
 
         {/* LINKS */}
