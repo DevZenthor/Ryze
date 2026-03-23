@@ -1,8 +1,10 @@
 import { useState } from "react"
+
 import Navbar from "./components/Navbar"
 import HeroIntro from "./components/HeroIntro"
 import SiteBackground from "./components/SiteBackground"
 import AboutSection from "./components/AboutSection"
+import ClientsSection from "./components/ClientsSection"
 
 export default function App() {
 
@@ -18,23 +20,34 @@ export default function App() {
   return (
     <div className="text-white">
 
+      {/* VIDEO BACKGROUND FIXE */}
       <SiteBackground />
 
+      {/* NAVBAR */}
       <Navbar lang={lang} setLang={setLang} />
 
+      {/* CONTENU */}
       <div className="relative z-10">
 
+        {/* 👤 PRESENTATION */}
         <AboutSection lang={lang} />
 
-        <section id="clients" className="min-h-screen flex items-center justify-center">
-          <h2 className="text-5xl font-bold">Clients</h2>
-        </section>
+        {/* 💼 CLIENTS */}
+        <ClientsSection lang={lang} />
 
-        <section id="gallery" className="min-h-screen flex items-center justify-center">
+        {/* 🖼️ GALERIE (placeholder) */}
+        <section
+          id="gallery"
+          className="min-h-screen flex items-center justify-center"
+        >
           <h2 className="text-5xl font-bold">Galerie</h2>
         </section>
 
-        <section id="contact" className="min-h-screen flex items-center justify-center">
+        {/* 🛒 COMMANDER (placeholder) */}
+        <section
+          id="contact"
+          className="min-h-screen flex items-center justify-center"
+        >
           <h2 className="text-5xl font-bold">Commander</h2>
         </section>
 

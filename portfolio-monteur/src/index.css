@@ -307,3 +307,300 @@ html, body, #root {
 
   opacity: 0.9;
 }
+
+/* ================= CLIENTS SECTION ================= */
+
+.clients-section {
+  min-height: 100vh;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.clients-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 50px;
+
+  color: #9efcff;
+
+  text-shadow:
+    0 0 20px rgba(0,255,255,0.9),
+    0 0 40px rgba(0,200,255,0.6);
+}
+
+/* ===== CAROUSEL ===== */
+
+.clients-carousel {
+  overflow: hidden;
+  margin-bottom: 90px;
+}
+
+.clients-track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+
+  animation: scrollClients 25s linear infinite;
+}
+
+/* ===== CLIENT CARD ===== */
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  color: #d6faff;
+  font-weight: 700;
+
+  transition: transform 0.25s ease;
+}
+
+.client-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid rgba(0,255,255,0.6);
+
+  box-shadow:
+    0 0 20px rgba(0,255,255,0.8),
+    0 0 50px rgba(0,200,255,0.4);
+}
+
+.client-card:hover {
+  transform: scale(1.15);
+}
+
+.client-card:hover img {
+  box-shadow:
+    0 0 35px rgba(0,255,255,1),
+    0 0 80px rgba(0,200,255,0.8);
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes scrollClients {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.clients-section {
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.clients-title {
+  font-size: 48px;
+  font-weight: 900;
+  color: #8efaff;
+  text-shadow: 0 0 25px cyan;
+  margin: 80px 0 40px;
+}
+
+/* ===== MONTAGE (5 visibles) ===== */
+
+.editor-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  min-height: 160px;
+}
+
+/* ========================= */
+/* ===== SECTION CLIENTS ==== */
+/* ========================= */
+
+.clients-section {
+  padding: 140px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* ===== TITRES ===== */
+
+.clients-title {
+  font-size: 52px;
+  font-weight: 900;
+  color: #8efaff;
+
+  text-shadow:
+    0 0 20px rgba(0,255,255,0.9),
+    0 0 40px rgba(0,255,255,0.5);
+
+  margin: 90px 0 50px;
+}
+
+/* ========================= */
+/* ===== MARQUEE MONTAGE ==== */
+/* ========================= */
+
+.clients-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Fade gauche */
+
+.clients-marquee::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  z-index: 2;
+
+  background: linear-gradient(to right, black, transparent);
+}
+
+/* Fade droite */
+
+.clients-marquee::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  z-index: 2;
+
+  background: linear-gradient(to left, black, transparent);
+}
+
+/* ===== TRACK ===== */
+
+.clients-track {
+  display: flex;
+  gap: 70px;
+  width: max-content;
+
+  animation: marquee 70s linear infinite;
+}
+
+/* ========================= */
+/* ===== MANAGER FIXE ===== */
+/* ========================= */
+
+.manager-row {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* ========================= */
+/* ===== CARTE CLIENT ===== */
+/* ========================= */
+
+.client-card {
+  min-width: 130px;
+  text-decoration: none;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: transform 0.35s ease;
+}
+
+/* ===== PHOTO ===== */
+
+.client-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid #00f0ff;
+
+  box-shadow:
+    0 0 25px rgba(0,255,255,0.8),
+    0 0 60px rgba(0,255,255,0.3);
+
+  transition: all 0.35s ease;
+}
+
+/* ===== NOM ===== */
+
+.client-card span {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* ===== HOVER ===== */
+
+.client-card:hover {
+  transform: translateY(-8px) scale(1.15);
+}
+
+.client-card:hover img {
+  box-shadow:
+    0 0 40px rgba(0,255,255,1),
+    0 0 90px rgba(0,255,255,0.6);
+}
+
+/* ========================= */
+/* ===== ANIMATION ===== */
+/* ========================= */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ========================= */
+/* ===== RESPONSIVE ===== */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .clients-title {
+    font-size: 36px;
+  }
+
+  .client-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .clients-track {
+    gap: 40px;
+  }
+
+  .manager-row {
+    gap: 50px;
+  }
+}
