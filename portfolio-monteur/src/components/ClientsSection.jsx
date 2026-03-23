@@ -3,11 +3,11 @@ export default function ClientsSection({ lang }) {
   const t = {
     fr: {
       editor: "Clients Montage",
-      manager: "Clients YouTube Manager"
+      manager: "YouTube Manager Pour"
     },
     en: {
       editor: "Editing Clients",
-      manager: "YouTube Manager Clients"
+      manager: "YouTube Manager For"
     }
   }
 
