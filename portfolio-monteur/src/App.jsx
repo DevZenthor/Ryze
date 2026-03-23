@@ -7,41 +7,43 @@ import AboutSection from "./components/AboutSection"
 import ClientsSection from "./components/ClientsSection"
 import GallerySection from "./components/GallerySection"
 import ContactSection from "./components/ContactSection"
+import Footer from "./components/Footer"
 
 export default function App() {
 
   const [entered, setEntered] = useState(false)
   const [lang, setLang] = useState("fr")
 
-  // 🎬 INTRO SEULE
   if (!entered) {
     return <HeroIntro onEnter={() => setEntered(true)} />
   }
 
-  // 💎 SITE COMPLET
   return (
     <div className="text-white">
 
-      {/* 💙 VIDEO BACKGROUND GLOBAL */}
+      {/* VIDEO BACKGROUND GLOBAL */}
       <SiteBackground />
 
-      {/* 🧭 NAVBAR */}
+      {/* NAVBAR */}
       <Navbar lang={lang} setLang={setLang} />
 
-      {/* 📄 CONTENU */}
+      {/* CONTENU */}
       <div className="relative z-10">
 
-        {/* 👤 PRESENTATION */}
+        {/* PRESENTATION */}
         <AboutSection lang={lang} />
 
-        {/* 💼 CLIENTS */}
+        {/* CLIENTS */}
         <ClientsSection lang={lang} />
 
-        {/* 🎬 GALERIE YOUTUBE */}
+        {/* GALERIE */}
         <GallerySection lang={lang} />
 
-        {/* 📩 CONTACT */}
+        {/* CONTACT */}
         <ContactSection lang={lang} />
+
+        {/* FOOTER */}
+        <Footer />
 
       </div>
 

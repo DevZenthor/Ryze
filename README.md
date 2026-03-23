@@ -1,75 +1,92 @@
-# 🎬 RYZE Portfolio — README
+🎬 RYZE Portfolio — README
+🇬🇧 English
 
-## 🇬🇧 English
+RYZE Portfolio is a modern personal portfolio website for a professional video editor and social media manager. It showcases the editor’s profile, clients, video projects, and contact information through a cinematic and high-end interface.
 
-This project is a personal portfolio website for a video editor. It presents the editor’s profile, professional clients, work gallery, social networks, and ordering/contact information in a clean and modern interface.
+✨ Purpose
 
-### ✨ Purpose
+The purpose of this portfolio is to:
 
-The goal of this portfolio is to:
+Present the video editor’s identity and expertise
+Highlight professional clients (editing & YouTube management)
+Showcase selected video work and projects
+Provide direct contact options for commissions
+Create a strong professional online presence
+🧩 Features
+🎬 Cinematic intro with fullscreen video
+👤 About / presentation section
+💼 Clients showcase (editing & YouTube management)
+🖼️ Video gallery (embedded content)
+🌍 Language switch (French / English)
+📩 Contact section for commissions
+🧭 Sticky navigation bar
+💙 Animated video background
+📱 Fully responsive design (desktop, tablet, mobile)
+🏁 Premium footer
+🛠️ Technologies Used
 
-* Introduce the video editor and their background
-* Showcase clients (video editors and YouTube managers)
-* Display a gallery of past work and projects
-* Provide links to social media platforms
-* Explain how to order services or start a collaboration
+This project is built with modern web technologies:
 
-### 🧩 Features
+⚛️ React
+⚡ Vite
+🎨 Tailwind CSS
+🎥 HTML5 Video backgrounds
+🔗 Embedded media (YouTube / X)
+🎯 React Icons
+📌 Usage
 
-* Personal presentation / About section
-* Clients section (video editors & YouTube managers)
-* Video gallery / portfolio showcase
-* Social media links
-* Order / booking information
-* Contact section for professional inquiries
-* Responsive design (desktop, tablet, mobile)
+This project can be used as a template for:
 
-### 🛠️ Technologies Used
+Video editor portfolios
+Motion designers
+Content creators
+Freelancers in creative industries
+Agency-style personal websites
 
-This portfolio may include technologies such as:
+You may customize the content, media, and branding to match your own professional identity.
 
-* HTML / CSS / JavaScript
-* Front‑end frameworks or libraries (if applicable)
-* Video embedding (YouTube, Vimeo, or self‑hosted)
+🇫🇷 Français
 
-### 📌 Usage
+RYZE Portfolio est un site de portfolio personnel moderne pour un monteur vidéo professionnel et social media manager. Il met en valeur son profil, ses clients, ses réalisations vidéo et ses informations de contact dans une interface cinématique haut de gamme.
 
-This code can be used as a template for building a professional portfolio for video editors or other creative professionals offering editing services online.
+✨ Objectif
 
----
+Ce portfolio a pour but de :
 
-## 🇫🇷 Français
+Présenter l’identité et l’expertise du monteur
+Mettre en avant ses clients (montage & gestion YouTube)
+Exposer une sélection de projets vidéo
+Fournir un moyen direct de passer commande
+Renforcer sa présence professionnelle en ligne
+🧩 Fonctionnalités
+🎬 Intro cinématique avec vidéo plein écran
+👤 Section de présentation
+💼 Vitrine des clients (montage & YouTube management)
+🖼️ Galerie vidéo (contenu intégré)
+🌍 Sélecteur de langue (Français / Anglais)
+📩 Section contact pour commandes
+🧭 Barre de navigation fixe
+💙 Fond vidéo animé
+📱 Design entièrement responsive
+🏁 Footer premium
+🛠️ Technologies utilisées
 
-Ce projet est un site web de portfolio personnel pour un monteur vidéo. Il présente son profil, ses clients professionnels, sa galerie de travaux, ses réseaux sociaux ainsi que les informations pour commander ses services, dans une interface moderne et épurée.
+Ce projet utilise des technologies web modernes :
 
-### ✨ Objectif
+⚛️ React
+⚡ Vite
+🎨 Tailwind CSS
+🎥 Arrière-plans vidéo HTML5
+🔗 Intégration de médias (YouTube / X)
+🎯 React Icons
+📌 Utilisation
 
-Le but de ce portfolio est de :
+Ce code peut servir de base pour :
 
-* Présenter le monteur et son parcours
-* Mettre en avant ses clients (monteurs et YouTube managers)
-* Afficher une galerie de projets réalisés
-* Fournir des liens vers ses réseaux sociaux
-* Expliquer comment commander ou démarrer une collaboration
+Portfolio de monteur vidéo
+Motion designer
+Créateur de contenu
+Freelance créatif
+Site personnel de type agence
 
-### 🧩 Fonctionnalités
-
-* Section de présentation du monteur
-* Section clients (monteurs & YouTube managers)
-* Galerie vidéo / portfolio
-* Liens vers les réseaux sociaux
-* Informations pour commander les services
-* Section de contact professionnel
-* Design responsive (ordinateur, tablette, mobile)
-
-### 🛠️ Technologies utilisées
-
-Ce portfolio peut inclure des technologies telles que :
-
-* HTML / CSS / JavaScript
-* Frameworks ou bibliothèques front‑end (si applicable)
-* Intégration de vidéos (YouTube, Vimeo ou hébergement direct)
-
-### 📌 Utilisation
-
-Ce code peut servir de base pour créer un portfolio professionnel destiné aux monteurs vidéo ou à tout professionnel créatif proposant des services de montage en ligne.
+Il suffit de remplacer les médias, textes et informations pour l’adapter à votre propre activité.

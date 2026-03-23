@@ -8,7 +8,6 @@ html, body, #root {
   color: white;
 }
 
-/* ================= VIDEO BACKGROUND FIXE ================= */
 
 .site-bg {
   position: fixed;
@@ -38,7 +37,10 @@ html, body, #root {
   pointer-events: none;
 }
 
-/* ================= INTRO VIDEO ================= */
+/* ========================= */
+/* ===== INTRO VIDEO ==== */
+/* ========================= */
+
 
 .hero-video {
   position: relative;
@@ -73,7 +75,10 @@ html, body, #root {
   pointer-events: none;
 }
 
-/* ================= BOUTON DECOUVRIR RYZE ================= */
+/* ========================= */
+/* ===== ACCUEIL CLIENTS ==== */
+/* ========================= */
+
 
 .discover-btn {
   position: absolute;
@@ -124,7 +129,10 @@ html, body, #root {
     0 5px 20px rgba(0,0,0,0.9);
 }
 
-/* ================= NAVBAR RYZE SIGNATURE ================= */
+/* ========================= */
+/* =====   NAVBAR      ==== */
+/* ========================= */
+
 
 .navbar {
   position: fixed;
@@ -163,7 +171,7 @@ html, body, #root {
 }
 
 .navbar-logo img {
-  height: 64px;   /* 🔥 GROS LOGO */
+  height: 64px;   
   filter:
     drop-shadow(0 0 12px rgba(0,255,255,0.9))
     drop-shadow(0 0 28px rgba(0,200,255,0.7));
@@ -238,7 +246,10 @@ html, body, #root {
     0 10px 35px rgba(0,0,0,0.9);
 }
 
-/* ================= PRESENTATION SECTION ================= */
+/* ================================ */
+/* ===== Presentation CLIENTS ==== */
+/* =============================== */
+
 
 .about-section {
   min-height: 100vh;
@@ -308,7 +319,10 @@ html, body, #root {
   opacity: 0.9;
 }
 
-/* ================= CLIENTS SECTION ================= */
+/* ========================= */
+/* ===== SECTION CLIENTS ==== */
+/* ========================= */
+
 
 .clients-section {
   min-height: 100vh;
@@ -418,7 +432,7 @@ html, body, #root {
   margin: 80px 0 40px;
 }
 
-/* ===== MONTAGE (5 visibles) ===== */
+/* ===== MONTAGE ===== */
 
 .editor-grid {
   display: flex;
@@ -781,5 +795,105 @@ html, body, #root {
 
   .contact-icon {
     font-size: 28px;
+  }
+}
+
+/* ========================= */
+/* ===== FOOTER PREMIUM ===== */
+/* ========================= */
+
+.footer {
+  width: 100%;
+  padding: 90px 20px 60px;
+
+  position: relative;
+  z-index: 10;
+
+  backdrop-filter: blur(18px);
+  background: rgba(3, 12, 22, 0.85);
+
+  border-top: 1px solid rgba(0,255,255,0.25);
+
+  box-shadow:
+    0 -10px 60px rgba(0,0,0,0.9),
+    0 0 60px rgba(0,255,255,0.08);
+}
+
+/* CONTAINER */
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== BRAND ===== */
+
+.footer-title {
+  font-size: 42px;
+  font-weight: 900;
+  color: #9efcff;
+
+  text-shadow:
+    0 0 20px rgba(0,255,255,1),
+    0 0 45px rgba(0,255,255,0.7);
+}
+
+.footer-sub {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+/* ===== DIVIDER ===== */
+
+.footer-divider {
+  width: 80px;
+  height: 2px;
+  margin: 40px auto;
+
+  background: linear-gradient(to right, transparent, cyan, transparent);
+
+  box-shadow: 0 0 20px cyan;
+}
+
+/* ===== DEV SIGNATURE ===== */
+
+.footer-dev {
+  font-size: 17px;
+  opacity: 0.8;
+}
+
+.footer-dev span {
+  font-weight: 900;
+  color: #8efaff;
+
+  text-shadow:
+    0 0 12px rgba(0,255,255,1),
+    0 0 30px rgba(0,255,255,0.7);
+
+  transition: all 0.25s ease;
+}
+
+.footer-dev span:hover {
+  text-shadow:
+    0 0 20px rgba(0,255,255,1),
+    0 0 45px rgba(0,255,255,1);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .footer-title {
+    font-size: 32px;
+  }
+
+  .footer-sub {
+    font-size: 16px;
+  }
+
+  .footer {
+    padding: 70px 20px 50px;
   }
 }
