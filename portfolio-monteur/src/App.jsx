@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar"
 import AboutSection from "./components/AboutSection"
 import ClientsSection from "./components/ClientsSection"
 import GallerySection from "./components/GallerySection"
+import ContactSection from "./components/ContactSection"
 
 export default function App() {
 
@@ -36,18 +37,11 @@ export default function App() {
         {/* 💼 CLIENTS */}
         <ClientsSection lang={lang} />
 
-        {/* 🎬 GALERIE */}
+        {/* 🎬 GALERIE YOUTUBE */}
         <GallerySection lang={lang} />
 
-        {/* 🛒 COMMANDER (placeholder) */}
-        <section
-          id="contact"
-          className="min-h-screen flex items-center justify-center"
-        >
-          <h2 className="text-5xl font-bold">
-            {lang === "fr" ? "Commander" : "Order"}
-          </h2>
-        </section>
+        {/* 📩 CONTACT */}
+        <ContactSection lang={lang} />
 
       </div>
 

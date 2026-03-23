@@ -675,3 +675,111 @@ html, body, #root {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================= */
+/* ===== CONTACT SECTION ==== */
+/* ========================= */
+
+.contact-section {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 140px 20px;
+}
+
+.contact-title {
+  font-size: 56px;
+  font-weight: 900;
+  color: #8efaff;
+
+  text-shadow:
+    0 0 20px rgba(0,255,255,0.9),
+    0 0 40px rgba(0,255,255,0.5);
+
+  margin-bottom: 20px;
+}
+
+.contact-desc {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 70px;
+}
+
+/* LINKS */
+
+.contact-links {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CARD */
+
+.contact-card {
+  backdrop-filter: blur(16px);
+  background: rgba(5, 15, 25, 0.65);
+
+  border: 2px solid rgba(0,255,255,0.4);
+  border-radius: 22px;
+
+  padding: 28px 44px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+
+  box-shadow:
+    0 0 25px rgba(0,255,255,0.5),
+    0 10px 40px rgba(0,0,0,0.8);
+
+  transition: all 0.3s ease;
+}
+
+/* ICON */
+
+.contact-icon {
+  font-size: 34px;
+}
+
+/* HOVER */
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.05);
+
+  box-shadow:
+    0 0 45px rgba(0,255,255,1),
+    0 15px 60px rgba(0,0,0,0.9);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .contact-title {
+    font-size: 40px;
+  }
+
+  .contact-desc {
+    font-size: 18px;
+  }
+
+  .contact-card {
+    padding: 22px 28px;
+    font-size: 18px;
+  }
+
+  .contact-icon {
+    font-size: 28px;
+  }
+}
