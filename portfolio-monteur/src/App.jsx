@@ -1,24 +1,32 @@
 import HeroIntro from "./components/HeroIntro"
+import SiteBackground from "./components/SiteBackground"
 
 export default function App() {
   return (
     <div className="text-white">
 
-      {/* INTRO VIDEO */}
+      {/* 🎬 INTRO VIDEO */}
       <HeroIntro />
 
-      {/* PORTFOLIO */}
-      <section
-        id="portfolio"
-        className="
-          min-h-screen
-          flex items-center justify-center
-          bg-black
-        "
-      >
-        <h1 className="text-6xl font-bold">
-          Portfolio
-        </h1>
+      {/* 💎 RESTE DU SITE */}
+      <section className="relative">
+
+        {/* Background animé */}
+        <SiteBackground />
+
+        {/* Contenu */}
+        <main className="relative z-10 min-h-screen flex items-center justify-center">
+          <h1 className="text-7xl font-bold">
+            Portfolio
+          </h1>
+        </main>
+
+        <section className="relative z-10 min-h-screen flex items-center justify-center">
+          <h2 className="text-5xl font-bold">
+            Clients
+          </h2>
+        </section>
+
       </section>
 
     </div>
