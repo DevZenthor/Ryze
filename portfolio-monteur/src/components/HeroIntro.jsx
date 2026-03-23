@@ -29,22 +29,10 @@ export default function HeroIntro({ onEnter }) {
 
       <button
         onClick={onEnter}
-        style={{
-          position: "absolute",
-          bottom: "60px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          padding: "14px 36px",
-          borderRadius: "12px",
-          background: "#2563eb",
-          color: "white",
-          fontSize: "18px",
-          fontWeight: "600",
-          boxShadow: "0 0 25px rgba(59,130,246,0.9)"
-        }}
-      >
+        className="discover-btn"
+        >
         Découvrir
-      </button>
+        </button>
 
     </section>
   )
