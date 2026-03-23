@@ -2,10 +2,10 @@ export default function AboutSection({ lang }) {
 
   const t = {
     fr: {
-      role: "Monteur | Social media manager pour @oneprodige"
+      role: "Monteur | Social media manager pour One Prodige"
     },
     en: {
-      role: "Editor | Social media manager for @oneprodige"
+      role: "Editor | Social media manager for One Prodige"
     }
   }
 
