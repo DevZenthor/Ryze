@@ -475,7 +475,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* ===== SECTION CLIENTS ==== */
+/* ===== CLIENTS FIX ===== */
 /* ========================= */
 
 .clients-section {
@@ -485,23 +485,18 @@ html, body, #root {
   z-index: 10;
 }
 
-/* ===== TITRES ===== */
-
 .clients-title {
   font-size: 52px;
   font-weight: 900;
   color: #8efaff;
+  margin: 90px 0 50px;
 
   text-shadow:
     0 0 20px rgba(0,255,255,0.9),
     0 0 40px rgba(0,255,255,0.5);
-
-  margin: 90px 0 50px;
 }
 
-/* ========================= */
-/* ===== MARQUEE MONTAGE ==== */
-/* ========================= */
+/* ===== MARQUEE DESKTOP ===== */
 
 .clients-marquee {
   position: relative;
@@ -510,44 +505,148 @@ html, body, #root {
   padding: 20px 0;
 }
 
-/* Fade gauche */
+.clients-track {
+  display: flex;
+  gap: 70px;
+  width: max-content;
 
-.clients-marquee::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 180px;
-  height: 100%;
-  z-index: 2;
-
-  background: linear-gradient(to right, black, transparent);
+  animation: marquee 60s linear infinite;
 }
 
-/* Fade droite */
-
-.clients-marquee::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 180px;
-  height: 100%;
-  z-index: 2;
-
-  background: linear-gradient(to left, black, transparent);
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* ===== TRACK ===== */
+/* ===== CLIENT CARD ===== */
+
+.client-card {
+  min-width: 130px;
+  text-decoration: none;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: transform 0.3s ease;
+}
+
+.client-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid #00f0ff;
+
+  box-shadow:
+    0 0 25px rgba(0,255,255,0.8),
+    0 0 60px rgba(0,255,255,0.3);
+}
+
+.client-card span {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ===== HOVER ===== */
+
+.client-card:hover {
+  transform: scale(1.12);
+}
+
+/* ========================= */
+/* ===== MOBILE VERSION ===== */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* STOP animation */
+
+  .clients-track {
+    animation: none;
+
+    overflow-x: auto;
+    width: 100%;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    gap: 30px;
+    padding-bottom: 15px;
+  }
+
+  .clients-marquee {
+    overflow-x: auto;
+  }
+
+  /* CARDS PLUS GROSSES */
+
+  .client-card {
+    min-width: 180px;
+    flex: 0 0 auto;
+
+    scroll-snap-align: center;
+  }
+
+  .client-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .client-card span {
+    font-size: 18px;
+  }
+
+  /* HIDE SCROLLBAR */
+
+ /* ===== TRACK ===== */
 
 .clients-track {
   display: flex;
   gap: 70px;
   width: max-content;
 
-  animation: marquee 70s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
+/* ========================= */
+/* ===== MOBILE VERSION ===== */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .clients-track {
+    animation: marquee 120s linear infinite; /* 🔥 lent */
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    gap: 30px;
+  }
+
+  /* 👉 pause animation quand user touche */
+
+  .clients-track:active {
+    animation-play-state: paused;
+  }
+
+  .client-card {
+    min-width: 180px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  .client-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+}
+}
 /* ========================= */
 /* ===== MANAGER FIXE ===== */
 /* ========================= */

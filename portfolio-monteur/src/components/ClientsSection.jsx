@@ -23,7 +23,8 @@ export default function ClientsSection({ lang }) {
     { name: "Hedra", img: "/hedra.jpg", twitter: "https://x.com/HedraFn" },
     { name: "Zarb", img: "/zarb.jpg", twitter: "https://x.com/coach_grimz" },
     { name: "Noia", img: "/noia.png", twitter: "https://x.com/noia_gg" },
-    { name: "Seek", img: "/seek.jpg", twitter: "https://x.com/seekkfn?s=21" }
+    { name: "Seek", img: "/seek.jpg", twitter: "https://x.com/seekkfn?s=21" },
+    { name: "Marco", img: "/marco.jpg", twitter: "https://x.com/marcofnbr?s=21" }
   ]
 
   // 👔 MANAGER
